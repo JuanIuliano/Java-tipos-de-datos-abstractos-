@@ -3,6 +3,7 @@ package colaPrioridad;
 public class main {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
 		//Creamos objeto de la clase colaTDA
 		colaTDA cola1 = new colaTDA();
@@ -136,8 +137,59 @@ public class main {
 		
 		
 		
+		// DICCIONARIOS SIMPLES -----------------------------------------------
+		System.out.println();
+		System.out.println();
 		
-
+		//crear objeto diccionario
+		diccionarioSimple diccionario = new diccionarioSimple();
+		//inicializar
+		diccionario.inicializar();
+		System.out.println("diccionario vacio?:"+diccionario.diccionarioVacio());
+		diccionario.agregar(1, 10);
+		diccionario.agregar(2, 20);
+		diccionario.agregar(3, 30);
+		diccionario.printDiccionario();
+		
+		//mostramos los valores asociados a algunas claves
+		System.out.println("diccionario vacio?:"+diccionario.diccionarioVacio());
+		System.out.println("El indice 1 tiene el valor: "+diccionario.recuperar(1));
+		System.out.println("El indice 2 tiene el valor: "+diccionario.recuperar(2));
+		System.out.println("El indice 3 tiene el valor: "+diccionario.recuperar(3));
+		
+		//eliminamos algunos pares
+		diccionario.eliminar(1);
+		diccionario.printDiccionario();
+		
+		//agregamos mas pares
+		diccionario.agregar(4, 40);
+		diccionario.agregar(5, 50);
+		diccionario.agregar(6, 60);
+		diccionario.agregar(7, 70);
+		diccionario.printDiccionario();
+		
+		//modificar algun valor ya asociado a una clave
+		
+		diccionario.agregar(6, 650);
+		diccionario.printDiccionario();
+		
+		int[] claves = diccionario.claves();
+		
+		System.out.println("La lista de claves es:");
+		System.out.print("[");
+		for (int i=0; i<claves.length; i++) {
+			System.out.print(claves[i]+", ");
+		}
+		System.out.print("]");
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
+
+
